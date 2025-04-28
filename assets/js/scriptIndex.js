@@ -1,1 +1,3 @@
-console.log("hola")
+function validar(){
+    console.log("Hi")
+}
