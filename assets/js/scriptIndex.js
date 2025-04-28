@@ -5,9 +5,13 @@ function validar(){
     let vNombre = eNombre.value 
     console.log(vNombre)
     console.log(vNombre.length)
-    if(vNombre.length > 3){
+    if(vNombre.trim().length==0){
+            console.log("Debes completar este campo")
+    }
+    else if(vNombre.length > 3){
         console.log("Cumple")
-    }else{
+    }
+    else{
         console.log("error pocos caracteres")
         alert("Debes ingresar al menos mas de 3 caracteres")
     }
