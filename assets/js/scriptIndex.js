@@ -2,7 +2,7 @@ function validar(){
     console.log("Hi")
     let eNombre = document.getElementById("nombre")
     console.log(eNombre)
-    let vNombre = eNombre.value 
+    let vNombre = eNombre.value.trim()
     console.log(vNombre)
     console.log(vNombre.length)
     if(vNombre.trim().length==0){
