@@ -12,10 +12,14 @@ function validar(){
     else if(vNombre.length > 3){
         console.log("Cumple")
         eErrorNombre.innerText = ""
+        eNombre.style.backgroundColor = "green"
+        eNombre.style.color = "white"
     }
     else{
         console.log("error pocos caracteres")
         alert("Debes ingresar al menos mas de 3 caracteres")
         eErrorNombre.innerText = "Debes ingresar 3 caracteres como minimo"
+        eNombre.style.backgroundColor = "red"
+        eNombre.style.color = "white"
     }
 }
