@@ -3,6 +3,7 @@ function validar(){
     let eNombre = document.getElementById("nombre")
     console.log(eNombre)
     let vNombre = eNombre.value.trim()
+    let eErrorNombre = document.getElementById("errorNombre")
     console.log(vNombre)
     console.log(vNombre.length)
     if(vNombre.trim().length==0){
@@ -14,5 +15,6 @@ function validar(){
     else{
         console.log("error pocos caracteres")
         alert("Debes ingresar al menos mas de 3 caracteres")
+        eErrorNombre.innerText = "Debes ingresar 3 caracteres como minimo"
     }
 }
