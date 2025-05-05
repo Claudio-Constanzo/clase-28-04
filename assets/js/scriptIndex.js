@@ -11,6 +11,7 @@ function validar(){
     }
     else if(vNombre.length > 3){
         console.log("Cumple")
+        eErrorNombre.innerText = ""
     }
     else{
         console.log("error pocos caracteres")
