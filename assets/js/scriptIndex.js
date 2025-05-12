@@ -20,8 +20,9 @@ function validar(){
         eNombre.value = ""
         eApellido.value = ""
         console.log(personas)
+        cargarTabla()
     }
-    
+    //los console.log de arriba no funcionan, preguntar al profe que es lo que falla
     // console.log(vNombre)
     // console.log(vNombre.length)
 
@@ -44,5 +45,9 @@ function validarLargoMinimo(elemento,valor,eError){
         elemento.style.backgroundColor = "red"
         elemento.style.color = "white"
         return false // false no funciona
+    }
+    function cargarTabla(){
+        let tablaPersonas = document.getElementById("tablaPersonas")
+
     }
 }
