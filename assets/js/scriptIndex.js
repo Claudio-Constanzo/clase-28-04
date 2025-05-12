@@ -1,11 +1,11 @@
 function validar(){
     // console.log("Hi")
     let eNombre = document.getElementById("nombre")
-    let vNombre = eNombre.value.trim()
+    let vNombre = eNombre.value
     let eErrorNombre = document.getElementById("errorNombre")
 
     let eApellido = document.getElementById("apellido")
-    let vApellido = eApellido.value.trim()
+    let vApellido = eApellido.value
     let eErrorApellido = document.getElementById("errorApellido")
     // console.log(eNombre)
     
