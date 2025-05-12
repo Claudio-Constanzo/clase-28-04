@@ -1,3 +1,4 @@
+let personas = []
 function validar(){
     // console.log("Hi")
     let eNombre = document.getElementById("nombre")
