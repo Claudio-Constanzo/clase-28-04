@@ -48,6 +48,13 @@ function validarLargoMinimo(elemento,valor,eError){
     }
     function cargarTabla(){
         let tablaPersonas = document.getElementById("tablaPersonas")
-
+        let personasMap = personas.map((p)=>{
+            return "<tr><td>"+p.nombre+"</td>"+
+                    "<td>"+p.apellido+"</td></tr>"
+        })
+        console.log("convirtiendo...")
+        console.log(personasMap)
+        let personasStr = personasMap.join("")
+        tablaPersonas.innerHTML = personasStr
     }
 }
