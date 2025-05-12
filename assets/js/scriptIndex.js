@@ -17,7 +17,7 @@ function validar(){
             nombre : vNombre,
             apellido : vApellido
         }
-        personas.push()
+        personas.push(persona)
     }
     
     // console.log(vNombre)
