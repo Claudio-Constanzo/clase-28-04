@@ -18,6 +18,8 @@ function validar(){
             apellido : vApellido
         }
         personas.push(persona)
+        eNombre.value = ""
+        eApellido.value = ""
     }
     
     // console.log(vNombre)
