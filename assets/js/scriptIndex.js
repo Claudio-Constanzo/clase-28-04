@@ -1,6 +1,5 @@
 let personas = []
 function validar(){
-    // console.log("Hi")
     let eNombre = document.getElementById("nombre")
     let vNombre = eNombre.value
     let eErrorNombre = document.getElementById("errorNombre")
@@ -20,6 +19,7 @@ function validar(){
         personas.push(persona)
         eNombre.value = ""
         eApellido.value = ""
+        console.log(personas)
     }
     
     // console.log(vNombre)
@@ -44,5 +44,5 @@ function validarLargoMinimo(elemento,valor,eError){
         elemento.style.backgroundColor = "red"
         elemento.style.color = "white"
         return false // false no funciona
-}
+    }
 }
