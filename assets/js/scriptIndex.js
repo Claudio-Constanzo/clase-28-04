@@ -104,3 +104,4 @@ function actualizar(){
     })
     cargarTabla()
 }
+//PARA LA PRUEBA HACER QUE FUNCIONE TODO, DEJAR LA VALIDACION PARA EL FINAL!!
