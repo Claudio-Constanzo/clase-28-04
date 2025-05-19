@@ -48,15 +48,19 @@ function validarLargoMinimo(elemento,valor,eError){
     }
     function cargarTabla(){
         let tablaPersonas = document.getElementById("tablaPersonas")
-        let personasMap = personas.map((p)=>{
+        let personasMap = personas.map((p,index)=>{
             return "<tr><td>"+p.nombre+"</td>"+
                     "<td>"+p.apellido+"</td>"+
-                    "<td><button onclick = 'eliminar'>Eliminar</button>"+
+                    "<td><button onclick = 'eliminar("+index+")'>Eliminar</button>"+
                     "</tr>"
         })
         console.log("convirtiendo...")
         console.log(personasMap)
         let personasStr = personasMap.join("")
         tablaPersonas.innerHTML = personasStr
+    }
+
+    function eliminar(indice){
+        alert("Eliminando el indice",indice)
     }
 }
