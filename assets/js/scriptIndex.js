@@ -77,9 +77,30 @@ function cargarDatos(indice){
     let eNombre = document.getElementById("nombre1")
     let eApellido = document.getElementById("apellido1")
     let personas = personas.filter((p,index)=>{
-        if(index == indice){
+        if(index == indice){//quedate con lo que coincide
             return p
         }
     })
-    
+    eNombre.value = persona[0].nombre
+    eApellido.value = persona[0].apellido
+    let eBtnActualizar = document.getElementById("btnActualizar")
+    eBtnActualizar.value = indice
+}
+
+function actualizar(){
+    let eNombre = document.getElementById("nombre1")
+    let eApellido = document.getElementById("apellido1")
+    let eBtnActualizar = document.getElementById("btnActualizar")
+    let indice = eBtnActualizar.value //recupera value del boton
+    personas = personas.map((p,index)=>{
+        if(index == indice){
+            return{
+                nombre: eNombre.value,
+                apellido: eApellido.value
+            }
+        }else{
+            return p
+        }
+    })
+    cargarTabla()
 }
