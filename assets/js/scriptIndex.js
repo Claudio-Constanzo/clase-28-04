@@ -45,11 +45,11 @@ function validarLargoMinimo(elemento,valor,eError){
         elemento.style.backgroundColor = "red"
         elemento.style.color = "white"
         return false // false no funciona
-    }
-    function cargarTabla(){
-        let tablaPersonas = document.getElementById("tablaPersonas")
-        let personasMap = personas.map((p,index)=>{
-            return "<tr><td>"+p.nombre+"</td>"+
+}}
+function cargarTabla(){
+    let tablaPersonas = document.getElementById("tablaPersonas")
+    let personasMap = personas.map((p,index)=>{
+        return "<tr><td>"+p.nombre+"</td>"+
                     "<td>"+p.apellido+"</td>"+
                     "<td><button onclick = 'eliminar("+index+")'>Eliminar</button>"+
                     "</tr>"
@@ -58,9 +58,16 @@ function validarLargoMinimo(elemento,valor,eError){
         console.log(personasMap)
         let personasStr = personasMap.join("")
         tablaPersonas.innerHTML = personasStr
-    }
-
-    function eliminar(indice){
-        alert("Eliminando el indice",indice)
-    }
 }
+
+function eliminar(indice){
+    alert("Eliminando el indice "+indice)
+    personas = personas.filter((p,index)=>{
+        if(index != indice){//manten los que no tengan ese indice
+            return p
+        }
+    })
+    
+
+}
+
