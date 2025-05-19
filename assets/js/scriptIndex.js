@@ -51,8 +51,9 @@ function cargarTabla(){
     let personasMap = personas.map((p,index)=>{
         return "<tr><td>"+p.nombre+"</td>"+
                     "<td>"+p.apellido+"</td>"+
-                    "<td><button onclick = 'eliminar("+index+")'>Eliminar</button></td>"+
-                    "</tr>"
+                    "<td><button onclick = 'eliminar("+index+")'>Eliminar</button>"+
+                    "<button onclick='cargarDatos("+index+")' Actualizar </button>"+
+                    "</td></tr>"
         })
         console.log("convirtiendo...")
         console.log(personasMap)
@@ -70,6 +71,15 @@ function eliminar(indice){
     console.log("despues de filtrar")
     console.log(personas)
     cargarTabla()
-
 }
 
+function cargarDatos(indice){
+    let eNombre = document.getElementById("nombre1")
+    let eApellido = document.getElementById("apellido1")
+    let personas = personas.filter((p,index)=>{
+        if(index == indice){
+            return p
+        }
+    })
+    
+}
