@@ -51,7 +51,7 @@ function cargarTabla(){
     let personasMap = personas.map((p,index)=>{
         return "<tr><td>"+p.nombre+"</td>"+
                     "<td>"+p.apellido+"</td>"+
-                    "<td><button onclick = 'eliminar("+index+")'>Eliminar</button>"+
+                    "<td><button onclick = 'eliminar("+index+")'>Eliminar</button></td>"+
                     "</tr>"
         })
         console.log("convirtiendo...")
