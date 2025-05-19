@@ -67,7 +67,9 @@ function eliminar(indice){
             return p
         }
     })
-    
+    console.log("despues de filtrar")
+    console.log(personas)
+    cargarTabla()
 
 }
 
